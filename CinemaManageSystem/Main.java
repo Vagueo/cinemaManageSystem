@@ -5,9 +5,9 @@ public class Main {
 	static Customer customer = new Customer(0,null,null,null,null,"铜牌用户",0,0);
 	static Manager manager1 = new Manager(123456,"刘经理","ynu_liu","13569405132","liujingli@yun.com");
 	static Receptionist receptionist1 = new Receptionist(124783,"杨前台","ynu_yang","15698406175","yangqiantai@ynu.com");
-	static Customer customer1 = new Customer(1478965,"噤若寒蝉1","14579605312","jing@ynu.com","ynu_jing","铜牌用户",0,0);
-	static Customer customer2 = new Customer(1569504,"水波不兴2","15867005329","shuibobuxing@ynu.com","ynu_shuibobuxing","金牌用户",100000,50);
-	static Customer customer3 = new Customer(1379524,"似水流年3","16249506072","sihsuiliunian@ynu.com","ynu_sishuiliunian","银牌用户",15000,100);
+	static Customer customer1 = new Customer(1478965,"噤若寒蝉1","14579605312","jingruohanchan@ynu.com","Ynu_jing123","铜牌用户",0,0);
+	static Customer customer2 = new Customer(1569504,"水波不兴2","15867005329","shuibobuxing@ynu.com","Ynu_shuibobuxing456","金牌用户",100000,50);
+	static Customer customer3 = new Customer(1379524,"似水流年3","16249506072","sihsuiliunian@ynu.com","Ynu_sishuiliunian789","银牌用户",15000,100);
 	
 	static Movie movie1 = new Movie("流浪地球","郭帆","吴京、屈楚萧、李光洁、吴孟达、赵今麦","影片根据刘慈欣的同名小说改编，故事背景设定在2075年，讲述了太阳即将毁灭，毁灭之后的太阳系已经不适合人类生存，而面对绝境，人类将开启“流浪地球”计划，试图带着地球一起逃离太阳系，寻找人类新家园的故事。",120);
 	static Movie movie2 = new Movie("你好，李焕英","贾玲","贾玲、张小斐","该片根据2016年的同名小品及贾玲亲身经历改编，讲述了刚考上大学的女孩贾晓玲经历了一次人生的大起大落后情绪失控，随后意外穿越回到了二十世纪八十年代，与20年前正值青春的母亲李焕英相遇的故事。",128);
