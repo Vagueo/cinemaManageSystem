@@ -52,7 +52,7 @@ public class Receptionist extends User{
         boolean exit = false;
 
         while (!exit) {
-            System.out.println("请选择你所要进行的操作:（建议再进行2-4操作时先进行1操作了解正在上映影片及其对应的放映厅）");
+            System.out.println("请选择你所要进行的操作:（建议在进行3、4操作时先依次进行1和2操作了解正在上映影片及其对应的放映厅）");
             System.out.println("1. 列出所有正在上映影片的信息");
             System.out.println("2. 列出所有正在上映影片的场次信息");
             System.out.println("3. 列出指定电影和场次的信息");
@@ -112,7 +112,7 @@ public class Receptionist extends User{
             System.out.println("-------------------------------");
         }
     }
-    // 列出所有正在上映影片的信息
+    // 列出所有正在上映影片的场次信息
     private static void listAllScreenings(Manager manager1) {
         System.out.println("=== 场次 ===");
         for (Show session : manager1.shows) {

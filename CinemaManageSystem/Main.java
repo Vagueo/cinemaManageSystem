@@ -15,7 +15,7 @@ public class Main {
     static Movie movie4 = new Movie("肖申克的救赎","弗兰克·德拉邦特","蒂姆·罗宾斯、摩根·弗里曼","该片改编自斯蒂芬·埃德温·金1982年的中篇小说《肖申克的救赎》，主要讲述了银行家安迪因被误判为枪杀妻子及其情人的罪名入狱后，他不动声色、步步为营地谋划自我拯救并最终成功越狱，重获自由的故事。",142);
     static Movie movie5 = new Movie("怦然心动","罗伯·莱纳","玛德琳·卡罗尔、卡兰·麦克奥利菲","朱莉·贝克（玛德琳·卡罗尔饰）虔诚地相信三件事：树是圣洁的（特别是她最爱的梧桐树）、她在后院里饲养的鸡生出来的鸡蛋是最卫生的、以及总有一天她会和布莱斯·罗斯基（卡兰·麦克奥利菲饰）接吻。二年级时在看到布莱斯的蓝眼睛那一瞬间，朱莉的心就被他击中了。不幸的是，布莱斯对她从来没有感觉。而且，他认为朱莉有点怪，怎么会有人把养鸡和坐在树上看成乐趣呢。\n"
     		+ "没想到，到了八年级，布莱斯开始觉得朱莉不同寻常的兴趣和对于家庭的自豪感使她显得很有魅力。而朱莉则开始觉得布莱斯漂亮的蓝眼睛也许和他本人一样其实很空洞，毕竟，怎么会有人不把别人对树和鸡的感情当回事呢?",107);
-    static Movie movie6 = new Movie("长津湖","陈凯歌、徐克、林超贤","吴京、易烊千玺","该片以抗美援朝战争第二次战役中的长津湖战役为背景，讲述了一段波澜壮阔的历史，在极寒严酷环境下，中国人民志愿军东线作战部队凭着钢铁意志和英勇无畏的战斗精神，扭转战场态势，为长津湖战役胜利作出重要贡献的故事。",176);
+    static Movie movie6 = new Movie("长津湖","陈凯歌","吴京、易烊千玺","该片以抗美援朝战争第二次战役中的长津湖战役为背景，讲述了一段波澜壮阔的历史，在极寒严酷环境下，中国人民志愿军东线作战部队凭着钢铁意志和英勇无畏的战斗精神，扭转战场态势，为长津湖战役胜利作出重要贡献的故事。",176);
 	
     static Show show1 = new Show(movie1,"放映厅1","14:00",38.5);
 	static Show show2 = new Show(movie2,"放映厅2","15:30",38.5);
@@ -64,7 +64,18 @@ public class Main {
 		manager1.Hall.put(show3, theater3);
 		manager1.Hall.put(show4, theater4);
 		manager1.Hall.put(show5, theater5);
-
+		
+		manager1.allTheaters.add(theater1);
+		manager1.allTheaters.add(theater2);
+		manager1.allTheaters.add(theater3);
+		manager1.allTheaters.add(theater4);
+		manager1.allTheaters.add(theater5);
+		manager1.allTheaters.add(theater6);
+		manager1.allTheaters.add(theater7);
+		manager1.allTheaters.add(theater8);
+		manager1.allTheaters.add(theater9);
+		manager1.allTheaters.add(theater10);
+		
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("请输入要进行操作的类型(如若要结束则输入0):");
 		System.out.println("1.管理员");
@@ -77,6 +88,7 @@ public class Main {
 		while(true) {
 			switch (userType){
 				case 1:
+					// 管理员登录
 					admin.login();
 					break;
 				case 2:

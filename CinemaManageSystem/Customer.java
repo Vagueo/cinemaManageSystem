@@ -361,6 +361,7 @@ public class Customer extends User{
 	        Ticket ticket = new Ticket(show.getMovie().getTitle(),show.getShowTime(),customer.getUsername(),discountedCost,TicketID);
 	        PurchaseHistory.add(ticket);
 	    }
+	 
 	    // 查看购票历史
 	    private static void viewPurchaseHistory(Customer customer) {
 	        System.out.println("-------------购票历史------------");
@@ -451,6 +452,6 @@ public class Customer extends User{
 	    }
 	    // 生成电影票的电子ID编号
 	    private static String generateTicketID() {
-	        return "XAD-123-423DG";
+	        return "XAD-123-423DGGUID";
 	    }
 }

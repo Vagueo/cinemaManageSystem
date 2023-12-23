@@ -141,7 +141,7 @@ public class Admin extends User{
             System.out.println("用户不存在！");
             do{
             	scanner = new Scanner(System.in);
-                System.out.println("请输入所要指定重置的影城方用户的用户名:");
+                System.out.println("请重新输入所要指定重置的影城方用户的用户名:");
                 username = scanner.nextLine();
                 user = findUserByUsername(username);
             }while(user == null);

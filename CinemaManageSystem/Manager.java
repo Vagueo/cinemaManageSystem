@@ -332,7 +332,6 @@ public class Manager extends User{
         System.out.println("请选择你所要进行的操作:");
         System.out.println("1. 根据影片名称查询");
         System.out.println("2. 根据导演查询");
-        System.out.println("3. 根据主演查询");
         
         int option = scanner.nextInt();
         scanner.nextLine();
@@ -359,15 +358,6 @@ public class Manager extends User{
 	        		 }
 	        		 
 	        	 }
-	         }else if(option == 3) {
-	             System.out.println("请输入主演名:");
-	             String leadActor = scanner.nextLine();
-	             for(Movie movie : movies) {
-	        		 if(movie.getLeadActor().equals(leadActor)) {
-		        		 System.out.println(movie.getLeadActor() + "主演的电影清单: ");
-			             System.out.println("片名:  " + movie.getTitle());
-	        		 }
-	             }
 	         }
 	         else {
 	        	 System.out.println("无效的选择，请重新选择你所要进行的操作:");
@@ -447,7 +437,16 @@ public class Manager extends User{
     	System.out.println("请选择要修改的场次的放映厅:");
     	String hall = scanner.nextLine();
     	Show show = findSessionByHall(hall);
-	    System.out.println("请选择要修改的信息:");
+	    System.out.println("请输入更换的电影名（也可以不安排电影,若不安排电影，则输入不安排）:");
+	    String title = scanner.nextLine();
+	    if(title == "不安排") {
+	    	sessions.put(show, null);
+	    	return;
+	    }
+	    Movie movie = findMovieByTitle(title);
+	    if(movie != null) {
+	    	sessions.put(show, movie);
+	    }
     }
     // 删除场次
     private void deleteSession() {
@@ -464,7 +463,7 @@ public class Manager extends User{
     		System.out.println("放映厅: " + show.getHall());
     		System.out.println("影片名: " + show.getMovie().getTitle());
     		System.out.println("时段: " + show.getShowTime());
-    		System.out.println("时段: " + show.getPrice());
+    		System.out.println("价格: " + show.getPrice());
     		System.out.println("------------------------");
     	}
     }

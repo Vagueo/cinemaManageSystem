@@ -11,7 +11,6 @@ public class Movie {
     private String leadActor; // 主演
     private String synopsis;  // 剧情简介
     private int duration;     // 时长（用分钟表示）
-    public static List<Movie> movies = new ArrayList<>();
     public Movie(String title, String director, String leadActor, String synopsis, int duration) {
         this.title = title;
         this.director = director;
@@ -57,11 +56,4 @@ public class Movie {
                 ", duration=" + duration +
                 '}';
     }
-}
-class Screening {
-
-	public Screening(Movie movie1, String string, String string2, double d) {
-		// TODO Auto-generated constructor stub
-	}
-    // ... (Previous Screening class implementation)
 }
